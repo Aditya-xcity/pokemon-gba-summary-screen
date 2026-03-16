@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend/style.css') }}">
+</head>
+<body>
+
+<div class="summary-container">
+
+    <img id="uiBoard"
+         src="{{ url_for('static', filename='Images/boards/board_info.png') }}"
+         class="ui-board"
+         alt="UI Board">
+
+    <div class="content">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+
+            <div class="sprite-block">
+                <div class="name-level inline">
+                    <span id="pokemonName" class="name"></span>
+                    <span id="pokemonLevel" class="level"></span>
+                </div>
+
+                <img id="pokemonImage" class="sprite" alt="Sprite">
+            </div>
+
+            <div id="spriteDescription" class="sprite-description"></div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right-panel">
+
+            <div id="cardLabel" class="card-label">INFO</div>
+
+            <!-- INFO -->
+            <div class="board active" id="infoBoard">
+                <div class="info-row"><b>Pokédex No.</b> <span id="infoDex"></span></div>
+                <div class="info-row"><b>Nickname</b> <span id="infoNickname"></span></div>
+                <div class="info-row"><b>OT</b> <span id="infoOT"></span></div>
+                <div class="info-row"><b>ID No.</b> <span id="infoId"></span></div>
+                <div class="info-row"><b>Item</b> <span id="infoItem"></span></div>
+                <div class="info-row"><b>Type</b> <span id="infoType"></span></div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="board" id="skillsBoard">
+                <div id="statsContainer"></div>
+                <div class="info-row"><b>Ability</b> <span id="skillAbility"></span></div>
+            </div>
+
+            <!-- MOVES -->
+            <div class="board" id="movesBoard">
+                <div id="moveList"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='frontend/script.js') }}"></script>
+</body>
+</html>
