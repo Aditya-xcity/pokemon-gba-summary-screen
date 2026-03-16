@@ -1,0 +1,34 @@
+# Python cache/artifacts
+__pycache__/
+*.py[cod]
+
+# Ignore all image assets by default
+static/Images/**
+
+# Keep board assets tracked
+!static/Images/boards/
+!static/Images/boards/**
+
+# Keep only currently used pokemon images tracked
+!static/Images/3.png
+!static/Images/6.png
+!static/Images/9.png
+!static/Images/25.png
+!static/Images/34.png
+!static/Images/65.png
+
+# Ignore all sound assets by default
+static/sound/**
+
+# Keep only currently used sounds tracked
+!static/sound/blip.wav
+!static/sound/3.wav
+!static/sound/6.wav
+!static/sound/9.wav
+!static/sound/25.wav
+!static/sound/34.wav
+!static/sound/65.wav
+
+# Keep type logo assets tracked
+!static/types_logo/
+!static/types_logo/**
