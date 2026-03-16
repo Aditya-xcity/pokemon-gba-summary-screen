@@ -1,0 +1,207 @@
+/* ================= PIXEL FONT ================= */
+
+@font-face {
+    font-family: "Pixel";
+    src: url("/static/fonts/PressStart2P-Regular.ttf");
+}
+
+/* ================= GLOBAL PIXEL LOCK ================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    user-select: none;
+
+    font-family: "Pixel", monospace !important;
+    image-rendering: pixelated;
+
+    -webkit-font-smoothing: none !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeSpeed;
+}
+
+html {
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #1b1b1b;
+    margin: 0;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.summary-container {
+    position: relative;
+    width: 720px;
+    height: 420px;
+    margin: 40px auto;
+
+    background: #e5e7eb;
+    border: 6px solid #000;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #000;
+}
+
+/* ================= UI BOARD ================= */
+
+.ui-board {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    height: 100%;
+    padding: 12px;
+}
+
+/* ================= LEFT PANEL ================= */
+
+.left-panel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NAME + LEVEL */
+
+.name-level {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.level {
+    font-size: 14px;
+}
+
+/* SPRITE */
+
+.sprite {
+    width: 147px;
+    height: auto;
+    margin-top: 11px;
+}
+
+/* DESCRIPTION BELOW SPRITE */
+
+.sprite-description {
+    margin-top: 35px;
+    padding: 12px;
+
+    width: 100%;
+    background: #ffffff;
+
+    border: 3px solid #000;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.right-panel {
+    width: 47%;
+    padding: 45px;
+    font-size: 17px;
+}
+
+/* ================= TITLE (INFO / SKILLS / MOVES) ================= */
+
+.card-label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+
+    font-size: 16px;
+    color: #000;
+
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* ================= BOARDS ================= */
+
+.board {
+    display: none;
+}
+
+.board.active {
+    display: block;
+}
+
+/* ================= INFO ROW ================= */
+
+.info-row {
+    background: #fef3c7;
+    border: 3px solid #000;
+
+    padding: 6px;
+    margin-bottom: 6px;
+}
+
+/* ================= STAT BOXES ================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.stat-box {
+    background: #fef3c7;
+    border: 3px solid #000;
+
+    padding: 6px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 16px;
+}
+
+/* ================= MOVES ================= */
+
+.move {
+    background: #fde68a;
+    border: 3px solid #000;
+
+    padding: 6px;
+    margin-bottom: 4px;
+}
+
+.move.selected {
+    background: #facc15;
+}
+
+/* ================= JUMP ANIMATION ================= */
+
+.jump {
+    animation: jump 0.12s steps(1);
+}
+
+@keyframes jump {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
